@@ -8,7 +8,7 @@ const Projects = () => {
       description:
         "A full-stack chatting platform with user authentication, real time chat.",
       technologies: ["React", "Node.js", "MongoDB", "Express"],
-      image: "/project1.jpg",
+      image: "/image.png",
       github: "https://github.com/kumarankesh1894/Web-Chat-app",
       live: "https://web-chat-app-10.onrender.com/login",
     },
@@ -16,19 +16,20 @@ const Projects = () => {
       title: "Blogging Platform",
       description:
         "A blogging platform where users can create, edit, and delete posts.",
-      technologies: ["React", "Firebase", "Material-UI"],
-      image: "/project2.jpg",
+      technologies: ["React", "Node js", "Express js", "JWT", "Material-UI"],
+      image: "/blog.jpg",
       github: "https://github.com/kumarankesh1894/Blogging-Frontend",
       live: "https://lambent-baklava-2b1e43.netlify.app/",
     },
     {
-      title: "Weather Dashboard",
+      title: "Portfolio Website",
       description:
-        "A weather application that provides real-time weather data and forecasts using weather API.",
-      technologies: ["JavaScript", "HTML", "CSS", "Weather API"],
-      image: "/project3.jpg",
-      github: "https://github.com/yourusername/weather-app",
-      live: "https://weather-dashboard-demo.com",
+        "A personal portfolio website to showcase my projects and skills.",
+      technologies: ["React", "CSS", "HTML", "JavaScript"],
+      image: "/portfolio.jpg",
+
+      github: "https://github.com/kumarankesh1894/My-portfolio",
+      live: "meankesh.netlify.app",
     },
   ];
 
