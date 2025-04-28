@@ -29,7 +29,7 @@ const Projects = () => {
       image: "/portfolio.jpg",
 
       github: "https://github.com/kumarankesh1894/My-portfolio",
-      live: "meankesh.netlify.app",
+      live: "https://meankesh.netlify.app",
     },
   ];
 
