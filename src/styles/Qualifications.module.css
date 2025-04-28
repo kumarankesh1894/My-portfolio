@@ -1,0 +1,146 @@
+.qualificationsSection {
+  padding: 100px 50px;
+  background-color: rgb(119, 20, 20);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.qualificationsSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/noise.png") repeat;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #ff6b6b;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6b6b, transparent);
+}
+
+.qualificationsContainer {
+  display: grid;
+  gap: 30px;
+}
+
+.qualificationCategory {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 15px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.categoryTitle {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #ff6b6b;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.categoryTitle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #ff6b6b;
+}
+
+.qualificationItems {
+  display: grid;
+  gap: 20px;
+}
+
+.qualificationItem {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.qualificationItem:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.qualificationHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.qualificationHeader h4 {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.year {
+  background: #ff6b6b;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.qualificationItem h5 {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.qualificationItem p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .qualificationsSection {
+    padding: 50px 20px;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .qualificationHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .year {
+    align-self: flex-start;
+  }
+}

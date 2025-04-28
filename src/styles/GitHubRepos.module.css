@@ -1,0 +1,155 @@
+.githubSection {
+  padding: 100px 50px;
+  background-color: rgb(119, 20, 20);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.githubSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/noise.png") repeat;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #ff6b6b;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6b6b, transparent);
+}
+
+.reposGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.repoCard {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 15px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.repoCard:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.repoName {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.repoName a {
+  color: #ff6b6b;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.repoName a:hover {
+  color: #ff8e8e;
+}
+
+.repoDescription {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  min-height: 60px;
+}
+
+.repoStats {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.repoFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.updated {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+}
+
+.viewButton {
+  background: #ff6b6b;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.viewButton:hover {
+  background: #ff8e8e;
+}
+
+.loading,
+.error {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .githubSection {
+    padding: 50px 20px;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .reposGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .repoFooter {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+}

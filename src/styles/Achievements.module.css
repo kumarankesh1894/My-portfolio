@@ -1,0 +1,112 @@
+.achievementsSection {
+  padding: 100px 50px;
+  background-color: rgb(119, 20, 20);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievementsSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/noise.png") repeat;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #ff6b6b;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6b6b, transparent);
+}
+
+.achievementsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.achievementCard {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 15px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.achievementCard:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.achievementHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.achievementTitle {
+  font-size: 1.3rem;
+  color: #ff6b6b;
+  margin: 0;
+}
+
+.year {
+  background: #ff6b6b;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.achievementDescription {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .achievementsSection {
+    padding: 50px 20px;
+  }
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  .achievementsGrid {
+    grid-template-columns: 1fr;
+  }
+  .achievementHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .year {
+    align-self: flex-start;
+  }
+}
